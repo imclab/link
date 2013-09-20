@@ -1,0 +1,16 @@
+<div class="media">
+  <a class="pull-left" href="/user/{{link.user}}">
+    <img src="img/glyphicons-halflings.png" width="50" class="media-object" />
+  </a>
+  <div class="media-body">
+    <div class="media-heading">
+      <a href="/user/{{link.username}}">{{link.username}}</a>
+    </div> <!-- media-heading -->
+    <a href="{{link.url}}" target="_blank">{{link.title}}</a><br />
+    <a href="{{link.url}}" target="_blank">{{link.url}}</a><br />
+    {{link.annotation}}<br />
+    {{link.modified_at | date}}<br />
+    <a class="btn btn-sm btn-info" ng-repeat="t in link.tags | orderBy: tag" href="tag/{{t.tag}}">#{{t.tag}}</a>
+  </div> <!-- media-body -->
+  <hr />
+</div> <!-- media -->
